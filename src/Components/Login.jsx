@@ -34,11 +34,12 @@ export default function Login() {
       passwordError = 'Incorrect password';
       valid = false;
     }
-
+    
     if (valid) {
       try {
         const response = await fetch('https://dms-api.apps.ginnsltd.com/v1/login', {
           method: 'POST',
+          mode: 'no-cors',
           headers: {
             'Content-Type': 'application/json',
           },
