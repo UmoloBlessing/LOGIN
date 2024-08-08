@@ -37,7 +37,7 @@ export default function Login() {
     
     if (valid) {
       try {
-        const response = await fetch('/.netlify/functions/login', {
+        const response = await fetch('https://dms-api.apps.ginnsltd.com/v1/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
